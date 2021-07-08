@@ -1,0 +1,115 @@
+.logo{
+    height: 3.25rem;
+    margin-left: 2rem;
+}
+
+.search{
+    flex: 0 0 40%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__input{
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        width: 90%;
+        height: 2.5rem;
+        border: none;
+        border-radius: 100px;
+        padding: .7rem 2rem;
+        transition: all .2s;
+        margin-right: -3rem;
+
+        &:focus{
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+            font-size: inherit;
+        }
+    }
+
+    &__input:focus + &__button{
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__button{
+        border: none;
+        background-color: var(--color-grey-light-2);
+
+        &:focus{
+            outline: none;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &:active{
+            transform: translateY(2px);
+        }
+
+    }
+
+    &__icon{
+        width: 2rem;
+        height: 2rem;
+        fill: var(--color-grey-dark-3);
+    }
+}
+
+.user-nav{
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+
+    & > * {
+        
+        display: flex;
+        align-items: center;
+        padding: 0 1.5rem;
+
+        &:hover{
+            background-color: var(--color-grey-light-2);
+            cursor: pointer;
+        }
+    }
+
+    &__icon-box{
+        position: relative;
+    }
+
+    &__icon{
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: var(--color-grey-dark-2);
+    }
+
+    &__notification{
+        background-color: var(--color-primary);
+        color: var(--color-grey-light-2);
+        font-size: .8rem;
+        padding: 2px;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top:1.7rem;
+        right: 0.9rem;
+    }
+
+
+    &__user-photo{
+        height: 3.75rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+}
